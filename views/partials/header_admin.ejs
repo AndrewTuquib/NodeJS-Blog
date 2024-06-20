@@ -1,0 +1,22 @@
+<header class="header">
+    <a href="/dashboard" class="header__logo">Admin Panel</a>
+    
+    <nav class="header__nav">
+        <ul >
+            <li class="">
+                <a href="/adminHome" class=" <%= isActiveRoute('/adminHome', currentRoute) %> ">Home</a>
+            </li>
+            <li class="">
+                <a href="/dashboard" class=" <%= isActiveRoute('/dashboard', currentRoute) %> ">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+   
+    <div class="header__button">
+        <button>
+            <a href="/logout" class="">Logout</a>
+        </button>
+    </div>
+
+   
+</header>

@@ -1,0 +1,17 @@
+<h3>Sign In</h3>
+
+<form action="/admin" method="POST">
+    <p class="errMessage"><%= message %></p>
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username">
+
+    <label for="password"><b>Password</b></label>
+    <input type="text" placeholder="Enter Password" name="password">
+
+
+    <div class="logBtn">
+        <input type="submit" value="Login" class="btn">
+        <a href="/register" class="alignRight"><span>Register</span></a>
+    </div>
+
+</form>

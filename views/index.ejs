@@ -1,0 +1,34 @@
+<div class="author">
+    <h1 class="author__heading">Hi, I'm Andrew.</h1>
+    <p class="author__body">Web developer and creative designer.</p>
+</div>
+
+<img src="/img/pexels-cottonbro-6037566.jpg" width="981">
+
+<section class="articles">
+    <h2 class="articles__heading">Latest Posts</h2>
+
+    <ul class="article-ul">
+        <% data.forEach(post => { %>
+            <li>
+                <a href="/post/<%=post._id%>" target="_blank">
+                    <span><%=post.title%></span>
+                    <span class="article-list__date"><%=post.createdAt.toDateString()%></span>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+
+    <div class="paginationBtn">
+        <% if (nextPage !== null) { %>
+            <a href="<%= urlExt %><%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+        <% } %>
+    
+        <% if (prevPage !== null) { %>
+            <a href="<%= urlExt %><%= prevPage %>" class="pagination paginationRight">View Newer Posts &gt;</a>
+        <% } %>
+    </div>
+    
+
+    
+</section>
